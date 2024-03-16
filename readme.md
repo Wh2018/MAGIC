@@ -186,6 +186,8 @@ After training, the model will be saved in `out_model` directory, organised in t
 ```
 
 ## Step3: MAGIC Model Evaluation
+Download the evaluation script from [google drive](https://drive.google.com/file/d/1AFE2B7dYw9mU4rLEN4k7BMrtOxIlhXYh/view?usp=sharing) and place it in the ``metric/`` directory.
+
 Running following command to evaluate the MAGIC model on the test data.
 
 ```python
