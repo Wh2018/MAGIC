@@ -60,7 +60,7 @@ The generated prompts will be save in `prompts_4_LLaMA.json`, `prompts_4_LLaMA_v
 
 ## Step 2: Fine-tuning LLaMA2 for deducible strategy inference
 
-Please first clone [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) repository and enter `LLaMA-Factory/` directory.
+Enter our cloned `LLaMA-Factory/` directory from [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) repository, and follow the following steps to fine-tune LLaMA2 for deducible strategy inference.
 
 Place the generated motivation file `prompts_4_LLaMA.json` in the `LLaMA-Factory/data/` directory. 
 
