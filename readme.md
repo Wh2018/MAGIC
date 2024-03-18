@@ -176,13 +176,13 @@ After training, the model will be saved in `out_model` directory, organised in t
 ```python
 ├── out_model
 │    ├── bs_16_epochs_20_20240213_152303  #16: batch size, 20: epochs, 20240213_152303: timestamp
-│        ├── epoch_0_val_ppl_18.3 # 0: epoch, 18.3: validation perplexity
-│        │      ├── dialogue_model.pth # dialogue model
-│        │      ├── memory_bank.pth # memory bank
-│        │      ├── merges.txt # the following 4 files for BART tokenizer
-│        │      ├── special_tokens_map.json
-│        │      ├── tokenizer_config.json
-│        │      └── vocab.json
+│    ├── ├── epoch_0_val_ppl_18.3 # 0: epoch, 18.3: validation perplexity
+│    ├── ├──    ├── dialogue_model.pth # dialogue model
+│    ├── ├──    ├── memory_bank.pth # memory bank
+│    ├── ├──    ├── merges.txt # the following 4 files for BART tokenizer
+│    ├── ├──    ├── special_tokens_map.json
+│    ├── ├──    ├── tokenizer_config.json
+│    ├── ├──    └── vocab.json
 ```
 
 ## Step3: MAGIC Model Evaluation
