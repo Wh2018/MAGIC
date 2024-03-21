@@ -44,7 +44,7 @@ Run following command to collect deducible motivations using ChatGPT API (*``gpt
 python collect_motivations_ChatGPT.py --openai_api_key <your_openai_api_key>
 ```
 
-Please replace `<your_openai_api_key>` with your OpenAI API key from https://platform.openai.com/api-keys
+Please replace `<your_openai_api_key>` with your OpenAI API key from [OpenAI API](https://platform.openai.com/api-keys)
 
 The generated motivations will be saved in `motivations_4_LLaMA.json`. We have released the generated motivation file for reproducibility.
 
