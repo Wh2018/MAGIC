@@ -21,7 +21,7 @@ This repository contains the **anonymous codes** for our **ECML-PKDD 2024 submit
 - protobuf 4.25.3
 - nltk 3.8.1
 
-You can install the require packages by
+You can install the required packages by
 `pip install -r requirements.txt`
 
 All experiments are conducted on a single NVIDIA Tesla A100-80GB GPU.
