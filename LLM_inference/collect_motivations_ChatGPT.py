@@ -14,7 +14,7 @@ def _norm(x):
 
 def gen_prompt_bein_end():
     """
-    Generate the begin and the end par of prompts for ChatGPT
+    Generate the begin and the end part of prompts for ChatGPT
     """
     
     prompt_begin = """Given a recent emotional support dialogue with labeled support strategies, infer the supporter's motivation for choosing the last strategy in the last response. There are 8 kinds of support strategies, including [Question], [Restatement or Paraphrasing], [Reflection of Feelings], [Self-disclosure], [Affirmation and Reassurance], [Providing Suggestions or Information], [Greeting], and [Others]
