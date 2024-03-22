@@ -1,6 +1,6 @@
-# MAGIC: Memory-enhanced Emotional Support Conversations with Deducible Strategy Inference
+# MAGIC: Memory-enhanced Emotional Support Conversations with Motivation-driven Strategy Inference
 
-This repository contains the **anonymous codes** for our **ECML-PKDD 2024 submitted paper**: *MAGIC: Memory-enhanced Emotional Support Conversations with Deducible Strategy Inference*.
+This repository contains the **anonymous codes** for our **ECML-PKDD 2024 submitted paper**: *MAGIC: Memory-enhanced Emotional Support Conversations with Motivation-driven Strategy Inference*.
 
 **Anonymous authors**
 
@@ -33,12 +33,12 @@ For strategy annotations, we use the optimized version provided by MultiESC, a t
 
 We have downloaded the `train.txt`, `valid.txt`, and `test.txt` files from the [MultiESC](https://github.com/lwgkzl/MultiESC) repository and place them in the `data/` folder.
 
-# Deducible Support Strategy Inference
-Enter `LLM_inference/` directory and follow the following steps to fine-tune LLaMA2 for deducible strategy inference.
+# Motivation-driven Support Strategy Inference
+Enter `LLM_inference/` directory and follow the following steps to fine-tune LLaMA2 for Motivation-driven strategy inference.
 
-## Step 1: Collection of deducible motivations of strategy inference
+## Step 1: Collection of strategy inference motivations
 
-Run following command to collect deducible motivations using ChatGPT API (*``gpt-3.5-turbo-0125``* verison) based on the dialogue context and corresponding response in the training data of ESConv `data/train.txt`. 
+Run following command to collect strategy inference motivations using ChatGPT API (*``gpt-3.5-turbo-0125``* verison) based on the dialogue context and corresponding response in the training data of ESConv `data/train.txt`. 
 
 ```python
 python collect_motivations_ChatGPT.py --openai_api_key <your_openai_api_key>
@@ -54,13 +54,13 @@ Create prompts for fine-tuning LLaMA2 using following command.
 python create_promots_4_LLaMA.py
 ```
 
-The generated prompts will be save in `prompts_4_LLaMA.json`, `prompts_4_LLaMA_valid.json`, and `prompts_4_LLaMA_test.json` files for training, validation and testing data in ESConv, respectively. We have released these three files for reproducibility.
+The generated prompts will be saved in `prompts_4_LLaMA.json`, `prompts_4_LLaMA_valid.json`, and `prompts_4_LLaMA_test.json` files for training, validation and testing data in ESConv, respectively. We have released these three files for reproducibility.
 
 
 
-## Step 2: Fine-tuning LLaMA2 for deducible strategy inference
+## Step 2: Fine-tuning LLaMA2 for motivation-driven strategy inference
 
-Enter our cloned `LLaMA-Factory/` directory from [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) repository, and follow the following steps to fine-tune LLaMA2 for deducible strategy inference.
+Enter our cloned `LLaMA-Factory/` directory from [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) repository, and follow the following steps to fine-tune LLaMA2 for motivation-driven strategy inference.
 
 Place the generated motivation file `prompts_4_LLaMA.json` in the `LLaMA-Factory/data/` directory. 
 
@@ -117,7 +117,7 @@ python src/export_model.py \
 
 Please set `adapter_name_or_path` to your saved checkpoint directory.
 
-The merged fine-tuned LLaMA2 model for deducible strategy inference will be saved in the `LLaMA-Factory/fine_tuned_llama2/` directory.
+The merged fine-tuned LLaMA2 model for motivation-driven strategy inference will be saved in the `LLaMA-Factory/fine_tuned_llama2/` directory.
 
 
 ## Step 3: Infer support strategies with motivations using fine-tuned LLaMA2
@@ -147,7 +147,7 @@ python data/add_memory_motivation.py
 
 The preprocessed data files will be saved in `data/train.json`, `data/valid.json`, and `data/test.json`.
 
-Please download the pre-trained checkpoinit of `bart-base` from [huggingface](https://huggingface.co/facebook/bart-base) and place it in the `src/bart_base/` directory.
+Please download the pre-trained checkpoint of `bart-base` from [huggingface](https://huggingface.co/facebook/bart-base) and place it in the `src/bart_base/` directory.
 
 ## Step 2: MAGIC Model Training
 
@@ -171,7 +171,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
 
 The training process will stop when the validation perplexity does not improve for 5 epochs.
 
-After training, the model will be saved in `out_model` directory, organised in the following directory.
+After training, the model will be saved in `out_model` directory, organized in the following directory.
 
 ```python
 ├── out_model
@@ -186,7 +186,7 @@ After training, the model will be saved in `out_model` directory, organised in t
 ```
 
 ## Step3: MAGIC Model Evaluation
-Download the evaluation script from [google drive](https://drive.google.com/file/d/1AFE2B7dYw9mU4rLEN4k7BMrtOxIlhXYh/view?usp=sharing) and place it in the ``metric/`` directory.
+Download the evaluation script from [Google Drive](https://drive.google.com/file/d/1AFE2B7dYw9mU4rLEN4k7BMrtOxIlhXYh/view?usp=sharing) and place it in the ``metric/`` directory.
 
 Running following command to evaluate the MAGIC model on the test data.
 
