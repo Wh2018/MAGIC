@@ -34,7 +34,7 @@ For strategy annotations, we use the optimized version provided by MultiESC, a t
 We have downloaded the `train.txt`, `valid.txt`, and `test.txt` files from the [MultiESC](https://github.com/lwgkzl/MultiESC) repository and place them in the `data/` folder.
 
 # Motivation-driven Support Strategy Inference
-Enter `LLM_inference/` directory and follow the following steps to fine-tune LLaMA2 for Motivation-driven strategy inference.
+Enter `LLM_inference/` directory and follow the following steps to fine-tune LLaMA2 for motivation-driven strategy inference.
 
 ## Step 1: Collection of strategy inference motivations
 
